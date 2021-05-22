@@ -8,9 +8,11 @@ $font-family-01: "Montserrat", sans-serif;
 
 $font-size: 14px;
 $font-size-hero: 40px;
+$font-size-hero--desktop: 70px;
 
 $line-height: 22px;
 $line-height-hero: 48px;
+$line-height-hero--desktop: 84px;
 
 /* Colors */
 $color-white: #FFF;
@@ -28,7 +30,6 @@ $icon-no-results: 'pick.png';
 $icon-sun: 'sun.png';
 $icon-arrow-down: 'arrow-down.png';
 
-
 /* Spaces */
 $space-01: 05px;
 $space-02: 10px;
@@ -36,3 +37,6 @@ $space-03: 15px;
 $space-04: 20px;
 $space-05: 25px;
 $space-06: 30px;
+
+/* Container */
+$container: 940px;
