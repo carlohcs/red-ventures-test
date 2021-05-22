@@ -1,0 +1,34 @@
+$iconPath: "#{$imagePath}icons/";
+
+.icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &--xs {
+        width: 18px;
+        height: 18px;
+    }
+
+    &.icon--arrow-down {
+        background-image: url("#{$iconPath}arrow-down.svg");
+    }
+
+    &.icon--arrow-up {
+        background-image: url("#{$iconPath}arrow-up.svg");
+    }
+
+    &.icon--pet {
+        background-image: url("#{$iconPath}pet.svg");
+    }
+
+    &.icon--low-sun {
+        background-image: url("#{$iconPath}low-sun.svg");
+    }
+
+    &.icon--drop {
+        background-image: url("#{$iconPath}1-drop.svg");
+    }
+}

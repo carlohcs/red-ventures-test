@@ -1,0 +1,157 @@
+.page {
+    &__header {
+        background-color: $brand-green-color-02;
+        background-image: url("#{$imagePath}hero/mobile/mobile-leaves.png"),
+            url("#{$imagePath}hero/mobile/mobile-plantperson.png");
+        background-position: center -250px, center 280px;
+        background-repeat: no-repeat, no-repeat;
+        background-size: cover, contain;
+        padding: 30px;
+        color: #fff;
+        min-height: calc(100vh);
+
+        &__title {
+            font-size: 38px;
+        }
+    }
+
+    &__filters {
+        padding: $space-06;
+    }
+
+    &__back-to-top {
+        background-color: $color-grey-01;
+        padding: $space-04 $space-06;
+    }
+}
+
+.steps {
+    .step__wrapper {
+    }
+
+    .step {
+        margin: 30px 0;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &__icon {
+            max-width: 58px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.page__results {
+    background-color: $color-grey-01;
+
+    &__wrapper {
+        padding: $space-06;
+    }
+
+    &__title {
+        font-size: 34px;
+    }
+
+    &__description {
+        font-size: 18px;
+    }
+
+    &__illustration {
+        padding: 10px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .page__results__not-found {
+        color: #b5b3b3;
+
+        .page__results__illustration {
+            width: 106px;
+        }
+    }
+
+    .page__results__found {
+        color: #333;
+
+        .page__results__illustration {
+            width: 150px;
+            margin: 0;
+            padding-bottom: 0;
+        }
+
+        .page__results__wrapper,
+        .page__results__title {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.results {
+    .result {
+        &__wrapper {
+            padding-left: $space-06;
+            display: flex;
+        }
+
+        &__items {
+            flex: 1;
+            display: flex;
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+
+        &__item {
+            min-width: 250px;
+            min-height: 320px;
+            padding: 20px;
+            margin-right: 20px;
+            background-color: $color-white;
+            border-radius: 5px;
+            position: relative;
+            color: $brand-green-color-01;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &__badge {
+                color: $color-white;
+                padding: 10px;
+                left: 0;
+                font-size: 12px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                position: absolute;
+                background-color: $brand-green-color-02;
+            }
+
+            &__image {
+                margin-top: 30px;
+            }
+
+            &__description,
+            &__price__actions__price {
+                font-weight: bold;
+            }
+
+            &__price__actions,
+            &__price__actions__actions {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &__price__actions__actions {
+                .icon {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}

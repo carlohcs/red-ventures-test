@@ -1,0 +1,32 @@
+/* Base */
+$base: '/src/';
+$imagePath: '#{$base}images/';
+
+
+/* Fonts */
+$font-family-01: "Montserrat", sans-serif;
+
+/* Colors */
+$color-white: #FFF;
+$color-grey-dark: #333;
+$color-grey-01: #eee;
+$brand-green-color-01: #15573F;
+$brand-green-color-02: #75BC97;
+$brand-pink-color-01: #FD9872;
+
+/* Icons */
+$icon-sunlight: 'sun.png';
+$icon-wateringcan: 'wateringcan.png';
+$icon-dog: 'dog.png';
+$icon-no-results: 'pick.png';
+$icon-sun: 'sun.png';
+$icon-arrow-down: 'arrow-down.png';
+
+
+/* Spaces */
+$space-01: 05px;
+$space-02: 10px;
+$space-03: 15px;
+$space-04: 20px;
+$space-05: 25px;
+$space-06: 30px;
