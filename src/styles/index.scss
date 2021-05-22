@@ -3,15 +3,21 @@
         background-color: $brand-green-color-02;
         background-image: url("#{$imagePath}hero/mobile/mobile-leaves.png"),
             url("#{$imagePath}hero/mobile/mobile-plantperson.png");
-        background-position: center -250px, center 280px;
+        background-position: center -250px, center 90%; // 280px
         background-repeat: no-repeat, no-repeat;
         background-size: cover, contain;
         padding: 30px;
         color: #fff;
         min-height: calc(100vh);
 
+        @include mobile-landscape {
+            // min-height: calc(100vh);
+            background-position: center 100%, center 156px;
+        }
+
         &__title {
             font-size: 38px;
+            max-width: 250px;
         }
     }
 

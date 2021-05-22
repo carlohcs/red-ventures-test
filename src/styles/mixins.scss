@@ -1,0 +1,8 @@
+/**
+ * Mixin to control mobile landscape
+ */
+@mixin mobile-landscape {
+    @media screen and (min-width: 568px) and (min-height: 320px) {
+        @content;
+    }
+}
