@@ -1,244 +1,237 @@
 .page {
-    &__header {
-        background-color: $brand-green-color-02;
-        background-image: url("#{$imagePath}hero/mobile/mobile-leaves.png"),
-            url("#{$imagePath}hero/mobile/mobile-plantperson.png");
-        background-position: center -250px, center 90%; // 280px
-        background-repeat: no-repeat, no-repeat;
-        background-size: cover, contain;
-        padding: 30px;
-        color: #fff;
-        min-height: calc(100vh);
+  &__header {
+    background-color: $brand-green-color-02;
+    background-image: url("#{$imagePath}hero/mobile/mobile-leaves.png"),
+      url("#{$imagePath}hero/mobile/mobile-plantperson.png");
+    background-position: center -250px, center 90%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, contain;
+    padding: 30px;
+    color: #fff;
+    min-height: calc(100vh);
 
-        @include mobile-landscape {
-            background-position: center 100%, center 156px;
-        }
-
-        @include tablet-portrait {
-            background-position: center -500px, center 90%;
-        }
-
-        @include desktop {
-            min-height: 500px;
-            padding: 60px 0 0 290px;
-
-            // Defined as layout: responsive until 1440px, after this breakpoint,
-            // needs more definitions and specs
-            background-image: url("#{$imagePath}hero/desktop/left-leaves.png"),
-                url("#{$imagePath}hero/desktop/plantperson.png"), url("#{$imagePath}hero/desktop/right-leaves.png");
-            background-position: -30% bottom, 64% bottom, center right;
-            background-size: contain, contain, contain;
-        }
-
-        &__title {
-            font-size: $font-size-hero;
-            line-height: $line-height-hero;
-            max-width: 250px;
-
-            @include desktop {
-                max-width: 450px;
-                font-size: $font-size-hero--desktop;
-                line-height: $line-height-hero--desktop;
-            }
-        }
+    @include mobile-landscape {
+      background-position: center 100%, center 156px;
     }
 
-    &__filters {
-        padding: $space-06;
+    @include tablet-portrait {
+      background-position: center -500px, center 90%;
     }
 
-    &__back-to-top {
-        background-color: $color-grey-01;
-        padding: $space-04 $space-06;
+    @include desktop {
+      min-height: 500px;
+      padding: 60px 0 0 290px;
 
-        &__wrapper {
-            @include desktop {
-                max-width: $container;
-                margin: 0 auto;
-                padding: $space-06 0;
-            }
-        }
-    }
-}
-
-.steps {
-    &__wrapper {
-        @include desktop {
-            display: flex;
-            max-width: $container;
-            margin: 0 auto;
-            padding: $space-06 0;
-            justify-content: space-between;
-            align-items: center;
-        }
-    }
-
-    .step {
-        margin: 30px 0;
-
-        &:first-of-type {
-            margin-top: 0;
-        }
-
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-
-        @include desktop {
-            height: 200px;
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            max-width: 220px;
-        }
-
-        &__icon {
-            height: 58px;
-            align-self: flex-start;
-            margin-bottom: 15px;
-
-            @include desktop {
-                height: 75px;
-                // margin-bottom: 20px;
-            }
-        }
-    }
-}
-
-.page__results {
-    background-color: $color-grey-01;
-
-    &__wrapper {
-        padding: $space-06;
-
-        @include desktop {
-            max-width: $container;
-            margin: 0 auto;
-            padding: $space-06 0;
-        }
-    }
-
-    &__content {
-        @include desktop {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      // Defined as layout: responsive until 1440px, after this breakpoint,
+      // needs more definitions and specs
+      background-image: url("#{$imagePath}hero/desktop/left-leaves.png"),
+        url("#{$imagePath}hero/desktop/plantperson.png"),
+        url("#{$imagePath}hero/desktop/right-leaves.png");
+      background-position: -30% bottom, 64% bottom, center right;
+      background-size: contain, contain, contain;
     }
 
     &__title {
-        font-size: $font-size-hero;
-        line-height: $line-height-hero;
-    }
+      font-size: $font-size-hero;
+      line-height: $line-height-hero;
+      max-width: 250px;
 
-    &__description {
-        font-size: 18px;
+      @include desktop {
+        max-width: 450px;
+        font-size: $font-size-hero--desktop;
+        line-height: $line-height-hero--desktop;
+      }
     }
+  }
 
-    &__illustration {
-        padding: 10px;
+  &__filters {
+    padding: $space-06;
+  }
+
+  &__back-to-top {
+    background-color: $color-grey-01;
+    padding: $space-04 $space-06;
+
+    &__wrapper {
+      @include desktop {
+        max-width: $container;
         margin: 0 auto;
-        text-align: center;
+        padding: $space-06 0;
+      }
+    }
+  }
+}
+
+.steps {
+  &__wrapper {
+    @include desktop {
+      display: flex;
+      max-width: $container;
+      margin: 0 auto;
+      padding: $space-06 0;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .step {
+    margin: 30px 0;
+
+    &:first-of-type {
+      margin-top: 0;
     }
 
-    .page__results__not-found {
-        color: #b5b3b3;
-
-        .page__results__illustration {
-            width: 106px;
-        }
+    &:last-of-type {
+      margin-bottom: 0;
     }
 
-    .page__results__found {
-        color: #333;
-
-        .page__results__illustration {
-            width: 150px;
-            margin: 0;
-            padding-bottom: 0;
-        }
-
-        .page__results__wrapper,
-        .page__results__title {
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
+    @include desktop {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      max-width: 220px;
     }
+
+    &__icon {
+      height: 58px;
+      align-self: flex-start;
+      margin-bottom: 15px;
+
+      @include desktop {
+        height: 75px;
+        // margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.page__results {
+  background-color: $color-grey-01;
+
+  &__wrapper {
+    padding: $space-06;
+
+    @include desktop {
+      max-width: $container;
+      margin: 0 auto;
+      padding: $space-06 0;
+    }
+  }
+
+  &__content {
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-hero;
+    line-height: $line-height-hero;
+  }
+
+  &__description {
+    font-size: 18px;
+  }
+
+  &__illustration {
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .page__results__not-found,
+  .page__results__found {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  .page__results__not-found {
+    color: #b5b3b3;
+
+    .page__results__illustration {
+      width: 106px;
+    }
+  }
+
+  .page__results__found {
+    color: #333;
+
+    .page__results__illustration {
+      width: 150px;
+      margin: 0;
+      padding-bottom: 0;
+    }
+
+    .page__results__wrapper,
+    .page__results__title {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .results {
-    .result {
-        &__wrapper {
-            padding-left: $space-06;
-            display: flex;
+  .result {
+    &__wrapper {
+      padding-left: $space-06;
+      display: flex;
 
-            @include desktop {
-                max-width: $container;
-                margin: 0 auto;
-                padding: $space-06 0;
-            }
+      @include desktop {
+        max-width: $container;
+        margin: 0 auto;
+        padding: $space-06 0;
+      }
+    }
+
+    &__items {
+      display: flex;
+      overflow-x: auto;
+      padding: 10px 0;
+
+      @include desktop {
+        display: flex;
+        width: $container;
+
+        overflow: hidden;
+        flex-wrap: wrap;
+      }
+    }
+
+    &__item {
+      min-width: 258px;
+      height: 320px;
+      flex-grow: 1;
+
+      padding: 20px;
+      margin-right: 16px;
+      background-color: $color-white;
+      border-radius: 5px;
+      position: relative;
+      color: $brand-green-color-01;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include desktop {
+        min-width: 206px;
+        height: 245px;
+        margin: $space-04 $space-04 0 0;
+
+        &--featured {
+          // min-width: 437px;
+          // min-height: 510px;
+          // flex: 1 0 66.6%;
         }
 
-        &__items {
-            // flex: 1;
-            display: flex;
-            overflow-x: auto;
-            padding: 10px 0;
-
-            @include desktop {
-                display: flex;
-                width: $container; // width: 860px;
-                // height: 1100px;
-
-                overflow: hidden;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                /*
-                flex-wrap: wrap;
-                justify-content: space-between;
-
-                // flex-flow: column wrap;
-                flex: 1 0 33.33%;
-                // justify-content: center;
-                // align-content: space-between;
-                // counter-reset: items;
-
-                //
-                */
-            }
-        }
-
-        &__item {
-            min-width: 258px;
-            min-height: 320px;
-            padding: 20px;
-            margin-right: 16px;
-            background-color: $color-white;
-            border-radius: 5px;
-            position: relative;
-            color: $brand-green-color-01;
-            display: flex;
-            flex-direction: column;
-
-            @include desktop {
-                min-width: 0;
-                min-height: 245px;
-
-                max-width: 206px;
-                max-height: 245px;
-                margin: $space-04 $space-04 0 0;
-
-                // flex-direction: row;
-
-                &--featured {
-                    // min-width: 437px;
-                    // min-height: 510px;
-                    // flex: 1 0 66.6%;
-                }
-
-                &--break {
-                    /* Force new columns */
-                    /*
+        &--break {
+          /* Force new columns */
+          /*
                     flex-basis: 100%;
                     width: 0;
                     border: 1px solid #ddd;
@@ -246,113 +239,51 @@
                     content: "";
                     padding: 0;
                     */
-                }
-
-                /* Re-order items into 3 rows */
-                /*
-                &:nth-of-type(4n + 1) {
-                    order: 1;
-                }
-                &:nth-of-type(4n + 2) {
-                    order: 2;
-                }
-                &:nth-of-type(4n + 3) {
-                    order: 3;
-                }
-                &:nth-of-type(4n) {
-                    order: 4;
-                }
-                */
-
-                /*
-                &:not(.result__item--break) {
-                    &:nth-of-type {
-                        order: 1;
-                    }
-
-                    &:nth-of-type(2) {
-                        order: 2;
-                    }
-
-                    &:nth-of-type(3) {
-                        order: 3;
-                    }
-
-                    &:nth-of-type(4) {
-                        order: 4;
-                    }
-
-                    &:nth-of-type(5) {
-                        order: 5;
-                    }
-
-                    &:nth-of-type(6) {
-                        order: 6;
-                    }
-
-                    &:nth-of-type(7) {
-                        order: 7;
-                    }
-
-                    &:nth-of-type(8) {
-                        order: 8;
-                    }
-
-                    &:nth-of-type(9) {
-                        order: 9;
-                    }
-                }
-                */
-
-                /* Re-order items into 3 rows */
-                /*.item:nth-child(3n + 1) {
-                    order: 1;
-                }
-                .item:nth-child(3n + 2) {
-                    order: 2;
-                }
-                .item:nth-child(3n) {
-                    order: 3;
-                }*/
-            }
-
-            &__badge {
-                color: $color-white;
-                padding: 10px;
-                left: 0;
-                font-size: 12px;
-                border-top-right-radius: 20px;
-                border-bottom-right-radius: 20px;
-                position: absolute;
-                background-color: $brand-green-color-02;
-            }
-
-            &__image {
-                margin-top: 30px;
-
-                @include desktop {
-                    width: 135px;
-                    width: 150px;
-                }
-            }
-
-            &__description,
-            &__price__actions__price {
-                font-weight: bold;
-            }
-
-            &__price__actions,
-            &__price__actions__actions {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            &__price__actions__actions {
-                .icon {
-                    margin: 0 5px;
-                }
-            }
         }
+
+      }
+
+      &__badge {
+        color: $color-white;
+        padding: 10px;
+        left: 0;
+        font-size: 12px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        position: absolute;
+        background-color: $brand-green-color-02;
+      }
+
+      &__image {
+        height: 220px;
+
+        img {
+          margin: 0 auto;
+        }
+
+        @include desktop {
+          height: 150px;
+          margin: 0 auto 20px;
+        }
+      }
+
+      &__description,
+      &__price__actions__price {
+        font-weight: bold;
+      }
+
+      &__price__actions,
+      &__price__actions__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__price__actions__actions {
+        .icon {
+          margin: 0 5px;
+        }
+      }
     }
+  }
 }

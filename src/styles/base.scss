@@ -1,44 +1,46 @@
 body {
-    font-family: $font-family-01;
-    font-size: $font-size;
-    line-height: $line-height;
-    background-color: $color-white;
-    color: $color-grey-dark;
+  font-family: $font-family-01;
+  font-size: $font-size;
+  line-height: $line-height;
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 
 html * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 select,
 textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 50px;
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 50px;
 }
 
 .img-responsive {
-    max-width: 100%;
-    display: block;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
 }
 
 .button {
-    width: 100%;
-    padding: 10px;
-    background: none;
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
+  width: 100%;
+  padding: 10px;
+  background: none;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
 
-    &--ghost {
-        color: $brand-green-color-01;
-        border: 1px solid $brand-green-color-01;
-    }
+  &--ghost {
+    color: $brand-green-color-01;
+    border: 1px solid $brand-green-color-01;
+  }
 
-    .icon {
-    }
+  .icon {
+  }
 }
