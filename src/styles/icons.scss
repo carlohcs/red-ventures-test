@@ -1,34 +1,51 @@
-$iconPath: "#{$imagePath}icons/";
+$iconPath: '#{$imagePath}icons/';
 
 .icon {
-    width: 32px;
-    height: 32px;
-    display: inline-block;
-    background-size: contain;
-    background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
 
-    &--xs {
-        width: 18px;
-        height: 18px;
-    }
+  &--xs {
+    width: 18px;
+    height: 18px;
+  }
 
-    &.icon--arrow-down {
-        background-image: url("#{$iconPath}arrow-down.svg");
-    }
+  &.icon--arrow-down {
+    background-image: url('#{$iconPath}arrow-down.svg');
+  }
 
-    &.icon--arrow-up {
-        background-image: url("#{$iconPath}arrow-up.svg");
-    }
+  &.icon--arrow-up {
+    background-image: url('#{$iconPath}arrow-up.svg');
+  }
 
-    &.icon--pet {
-        background-image: url("#{$iconPath}pet.svg");
-    }
+  &.icon--pet {
+    background-image: url('#{$iconPath}pet.svg');
+  }
+  
+  &.icon--sun-high, // doesn't exists an icon for high sun, providing a fallback
+  &.icon--sun-low {
+    background-image: url('#{$iconPath}low-sun.svg');
+  }
 
-    &.icon--low-sun {
-        background-image: url("#{$iconPath}low-sun.svg");
-    }
+  &.icon--sun-no {
+    background-image: url('#{$iconPath}no-sun.svg');
+  }
 
-    &.icon--drop {
-        background-image: url("#{$iconPath}1-drop.svg");
-    }
+  &.icon--toxic {
+    background-image: url('#{$iconPath}toxic.svg');
+  }
+
+  &.icon--drop-daily {
+    background-image: url('#{$iconPath}3-drops.svg');
+  }
+
+  &.icon--drop-regularly {
+    background-image: url('#{$iconPath}2-drops.svg');
+  }
+
+  &.icon--drop-rarely {
+    background-image: url('#{$iconPath}1-drop.svg');
+  }
 }

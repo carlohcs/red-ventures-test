@@ -9,9 +9,9 @@ const API = {
    * Run a request
    *
    * @param   {String} method get | post | put | delete ...
-   * @param   {*} url
-   * @param   {*} data
-   * @param   {*} options
+   * @param   {String} url
+   * @param   {String} data
+   * @param   {String} options
    * @returns {Promise}
    */
   async runRequest(method, url, data = {}, options = false) {

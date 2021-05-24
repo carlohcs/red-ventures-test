@@ -11,13 +11,13 @@ const data = [{id: 1;
 */
 // src="/src/images/plants/bunny-ears-cacti.jpg"
 
-const resultItemTemplate = (data) => {
+const resultItemTemplate = (data, options = {}) => {
   return `
 <div class="result__item">
   ${
     data.staff_favorite
       ? '<div class="result__item__badge">Staff favorite</div>'
-      : ""
+      : ''
   }
   <div class="result__item__image">
     <img
@@ -30,12 +30,21 @@ const resultItemTemplate = (data) => {
   <div class="result__item__price__actions">
     <div class="result__item__price__actions__price">$${data.price}</div>
     <div class="result__item__price__actions__actions">
-      <span class="icon icon--xs icon--pet icon--pet-${data.toxicity}"></span>
-      <span class="icon icon--xs icon--sun icon--sun-${data.sun}"></span>
-      <span class="icon icon--xs icon--drop icon--drop-${data.water}"></span>
+    ${
+      options.pets === 'true'
+        ? '<span class="icon icon--xs icon--pet"></span>'
+        : ''
+    }
+    ${
+      data.sun
+        ? `<span class="icon icon--xs icon--sun-${data.sun}"></span>`
+        : ''
+    }
+      <span class="icon icon--xs icon--drop-${data.water}"></span>
+      ${data.toxicity ? '<span class="icon icon--xs icon--toxic"></span>' : ''}
     </div>
   </div>
-</div>`;
-};
+</div>`
+}
 
-export default resultItemTemplate;
+export default resultItemTemplate
