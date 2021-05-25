@@ -4,7 +4,35 @@
   "description": "Simple Parcel Sandbox",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --open"
+    "start": "parcel index.html --open",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "testRegex": ".spec.js$",
+    "testURL": "http://localhost:1234",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": ["**/src/scripts/**/*.js"],
+    "coverageDirectory": "tests/coverage",
+    "coverageReporters": ["lcov"]
+  },  
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -12,6 +40,10 @@
     "parcel": "1.12.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "babel-jest": "^27.0.1",
+    "jest": "^27.0.1",
     "parcel-bundler": "^1.6.1",
     "sass": "^1.33.0"
   },

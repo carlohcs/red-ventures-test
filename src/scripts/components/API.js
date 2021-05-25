@@ -3,8 +3,7 @@ import 'regenerator-runtime/runtime'
 import axios from 'axios'
 
 const API = {
-  URL:
-    'https://front-br-challenges.web.app/api/v2/green-thumb/?sun={{sun}}&water={{water}}&pets={{pets}}',
+  URL: 'https://front-br-challenges.web.app/api/v2/green-thumb/?sun={{sun}}&water={{water}}&pets={{pets}}',
   /**
    * Run a request
    *
@@ -34,7 +33,14 @@ const API = {
    * @returns {Promise}
    */
   async getItems(sun, water, pets) {
-    if (sun.trim() === '' || water.trim() === '' || pets.trim() === '') {
+    if (
+      !sun ||
+      sun.trim() === '' ||
+      !water ||
+      water.trim() === '' ||
+      !pets ||
+      pets.trim() === ''
+    ) {
       throw new Error('[API error] Missing arguments.')
     }
 
