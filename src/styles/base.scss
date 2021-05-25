@@ -1,3 +1,10 @@
+html,
+body,
+.app {
+  min-height: 100%;
+  height: 100%;
+}
+
 body {
   font-family: $font-family-01;
   font-size: $font-size;
@@ -10,12 +17,32 @@ html * {
   box-sizing: border-box;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 select,
 textarea {
   width: 100%;
   padding: 10px;
   margin: 20px 0;
   border-radius: 50px;
+}
+
+select {
+  color: $color-grey-dark;
+  background: $color-white;
+}
+
+option {
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-white;
+    background: $brand-green-color-02;
+  }
 }
 
 .img-responsive {
@@ -39,8 +66,14 @@ textarea {
   &--ghost {
     color: $brand-green-color-01;
     border: 1px solid $brand-green-color-01;
-  }
 
-  .icon {
+    &:hover {
+      color: $color-white;
+      background-color: $brand-green-color-01;
+
+      .icon {
+        filter: invert(100%);
+      }
+    }
   }
 }

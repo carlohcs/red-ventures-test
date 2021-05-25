@@ -12,157 +12,159 @@
   </head>
 
   <body class="page page--home">
-    <!-- HEADER -->
-    <section class="page__header" id="page__header">
-      <header class="page__header__logo">
-        <img src="/src/images/icons/logo-white.svg" alt="Greenthumb" />
-      </header>
+    <div class="app">
+      <!-- HEADER -->
+      <section class="page__header" id="page__header">
+        <header class="page__header__logo">
+          <img src="/src/images/icons/logo-white.svg" alt="Greenthumb" />
+        </header>
 
-      <div class="page__header__wrapper">
-        <div class="page__header__content">
-          <h1 class="page__header__title">Find your next green friend</h1>
-          <a href="#page__filters">
-            <span class="icon icon--arrow-down"></span>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- // HEADER -->
-
-    <main class="page__content">
-      <!-- FILTERS -->
-      <section class="page__filters" id="page__filters">
-        <div class="page__filters__wrapper">
-          <!-- STEPS -->
-          <div class="steps">
-            <div class="steps__wrapper">
-              <!-- SUNLIGHT -->
-              <div class="step">
-                <img
-                  class="step__icon img-responsive"
-                  src="/src/images/illustrations/sun.png"
-                />
-                <div class="step__description">
-                  <strong>1.</strong> Set the amount of
-                  <strong>sunlight</strong> your plant will get.
-                </div>
-                <div class="step__select-wrapper">
-                  <select class="step__select" data-step="sun">
-                    <option value="">Select...</option>
-                    <option value="no">no</option>
-                    <option value="low">low</option>
-                    <option value="high">high</option>
-                  </select>
-                </div>
-              </div>
-              <!-- // SUNLIGHT -->
-
-              <!-- WATERING CAN -->
-              <div class="step">
-                <img
-                  class="step__icon img-responsive"
-                  src="/src/images/illustrations/wateringcan.png"
-                />
-                <div class="step__description">
-                  <strong>2.</strong> How often do you want to
-                  <strong>water</strong> your plant?
-                </div>
-                <div class="step__select-wrapper">
-                  <select class="step__select" data-step="water">
-                    <option value="">Select...</option>
-                    <option value="regularly">regularly</option>
-                    <option value="daily">daily</option>
-                    <option value="rarely">rarely</option>
-                  </select>
-                </div>
-              </div>
-              <!-- // WATERING CAN -->
-
-              <!-- DOG -->
-              <div class="step">
-                <img
-                  class="step__icon img-responsive"
-                  src="/src/images/illustrations/dog.png"
-                />
-                <div class="step__description">
-                  <strong>3.</strong> Do you have pets? Do they
-                  <strong>chew</strong> plants?
-                </div>
-                <div class="step__select-wrapper">
-                  <select class="step__select" data-step="pets">
-                    <option value="">Select...</option>
-                    <option value="true">true</option>
-                    <option value="false">false</option>
-                  </select>
-                </div>
-              </div>
-              <!-- // DOG -->
-            </div>
+        <div class="page__header__wrapper">
+          <div class="page__header__content">
+            <h1 class="page__header__title">Find your next green friend</h1>
+            <a href="#page__filters">
+              <span class="icon icon--arrow-down"></span>
+            </a>
           </div>
-          <!-- // STEPS -->
         </div>
       </section>
-      <!-- // FILTERS -->
+      <!-- // HEADER -->
 
-      <!-- RESULTS -->
-      <section class="page__results">
-        <!-- NOT FOUND -->
-        <div class="page__results__not-found">
-          <div class="page__results__wrapper">
-            <div class="page__results__content">
-              <div class="page__results__content__column">
-                <h3 class="page__results__title">No results yet...</h3>
-                <p class="page__results__description">
-                  Use the filters above to find the plant that best fits your
-                  environment :)
-                </p>
-              </div>
-              <div class="page__results__content__column">
-                <div class="page__results__illustration">
+      <main class="page__content">
+        <!-- FILTERS -->
+        <section class="page__filters" id="page__filters">
+          <div class="page__filters__wrapper">
+            <!-- STEPS -->
+            <div class="steps">
+              <div class="steps__wrapper">
+                <!-- SUNLIGHT -->
+                <div class="step">
                   <img
-                    src="/src/images/illustrations/no-results.png"
-                    class="img-responsive"
-                    alt="Not found!"
+                    class="step__icon img-responsive"
+                    src="/src/images/illustrations/sun.png"
                   />
+                  <div class="step__description">
+                    <strong>1.</strong> Set the amount of
+                    <strong>sunlight</strong> your plant will get.
+                  </div>
+                  <div class="step__select-wrapper">
+                    <select class="step__select" data-step="sun">
+                      <option value="">Select...</option>
+                      <option value="no">No sunlight</option>
+                      <option value="low">Low sunlight</option>
+                      <option value="high">High sunlight</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- // SUNLIGHT -->
+
+                <!-- WATERING CAN -->
+                <div class="step">
+                  <img
+                    class="step__icon img-responsive"
+                    src="/src/images/illustrations/wateringcan.png"
+                  />
+                  <div class="step__description">
+                    <strong>2.</strong> How often do you want to
+                    <strong>water</strong> your plant?
+                  </div>
+                  <div class="step__select-wrapper">
+                    <select class="step__select" data-step="water">
+                      <option value="">Select...</option>
+                      <option value="rarely">Rarely</option>
+                      <option value="regularly">Regularly</option>
+                      <option value="daily">Daily</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- // WATERING CAN -->
+
+                <!-- DOG -->
+                <div class="step">
+                  <img
+                    class="step__icon img-responsive"
+                    src="/src/images/illustrations/dog.png"
+                  />
+                  <div class="step__description">
+                    <strong>3.</strong> Do you have pets? Do they
+                    <strong>chew</strong> plants?
+                  </div>
+                  <div class="step__select-wrapper">
+                    <select class="step__select" data-step="pets">
+                      <option value="">Select...</option>
+                      <option value="false">No/They don't care</option>
+                      <option value="true">Yes</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- // DOG -->
+              </div>
+            </div>
+            <!-- // STEPS -->
+          </div>
+        </section>
+        <!-- // FILTERS -->
+
+        <!-- RESULTS -->
+        <section class="page__results">
+          <!-- NOT FOUND -->
+          <div class="page__results__not-found">
+            <div class="page__results__wrapper">
+              <div class="page__results__content">
+                <div class="page__results__content__column">
+                  <h3 class="page__results__title">No results yet...</h3>
+                  <p class="page__results__description">
+                    Use the filters above to find the plant that best fits your
+                    environment :)
+                  </p>
+                </div>
+                <div class="page__results__content__column">
+                  <div class="page__results__illustration">
+                    <img
+                      src="/src/images/illustrations/no-results.png"
+                      class="img-responsive"
+                      alt="Not found!"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- // NOT FOUND -->
+          <!-- // NOT FOUND -->
 
-        <!-- FOUND -->
-        <div class="page__results__found">
-          <div class="page__results__wrapper">
-            <div class="page__results__illustration">
-              <img
-                src="/src/images/illustrations/pick.png"
-                class="img-responsive"
-                alt="Found!"
-              />
+          <!-- FOUND -->
+          <div class="page__results__found">
+            <div class="page__results__wrapper">
+              <div class="page__results__illustration">
+                <img
+                  src="/src/images/illustrations/pick.png"
+                  class="img-responsive"
+                  alt="Found!"
+                />
+              </div>
+              <h3 class="page__results__title">Our picks for youh</h3>
             </div>
-            <h3 class="page__results__title">Our picks for youh</h3>
-          </div>
 
-          <div class="results">
-            <div class="result__wrapper">
-              <div class="result__items"></div>
+            <div class="results">
+              <div class="result__wrapper">
+                <div class="result__items"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- // FOUND -->
-      </section>
-      <!-- // RESULTS -->
+          <!-- // FOUND -->
+        </section>
+        <!-- // RESULTS -->
 
-      <div class="page__back-to-top">
-        <div class="page__back-to-top__wrapper">
-          <a class="button button--ghost" href="#page__header">
-            <span class="icon icon--xs icon--arrow-up"></span>
-            back to the top
-          </a>
+        <div class="page__back-to-top">
+          <div class="page__back-to-top__wrapper">
+            <a class="button button--ghost" href="#page__header">
+              <span class="icon icon--xs icon--arrow-up"></span>
+              back to the top
+            </a>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
 
     <!-- SCRIPTS -->
     <script src="src/scripts/application.js"></script>

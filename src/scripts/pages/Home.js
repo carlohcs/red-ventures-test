@@ -64,18 +64,15 @@ const Home = () => {
    *
    * @returns {void}
    */
-  const handleSelect = (/*evt*/) => {
+  const handleSelect = (/* evt */) => {
     const { sun, water, pets } = getStepsData()
 
     API.getItems(sun, water, pets)
       .then((response) => {
-        console.log('Server response: ', response)
         fillResults(response)
         toggleResultsVisible(true)
       })
-      .catch((error) => {
-        console.log(error)
-
+      .catch((/* error */) => {
         toggleResultsVisible(false)
       })
   }
